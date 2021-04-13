@@ -21,9 +21,9 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from django.conf.urls import url
 
-admin.site.site_header = "Harit Films Production"
-admin.site.site_title = "Harit Films Production Portal"
-admin.site.index_title = "Welcome to Harit films Production Researcher Portal"
+admin.site.site_header = "Saint Haridas Aashram Kharenti"
+admin.site.site_title = "Saint Haridas Aashram Kharenti Portal"
+admin.site.index_title = "Welcome to Saint Haridas Aashram Kharenti Researcher Portal"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Home.urls')),

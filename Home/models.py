@@ -6,7 +6,6 @@ class Contact(models.Model):
     name=models.CharField(max_length=122)
     phone=models.CharField(max_length=12)
     email=models.CharField(max_length=122)
-    password=models.CharField(max_length=20)
     desc=models.TextField(max_length=122)
     date=models.DateField()
 

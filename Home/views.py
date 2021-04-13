@@ -17,31 +17,28 @@ def about(request):
     return render(request, "about.html")
 
     #return HttpResponse("this is about page")
-def services(request):
-    return render(request, "services.html")
 
-    #return HttpResponse("this is sevices page")
-def photoshoot(request):
-    return render(request, "photoshoot.html")
+def audio(request):
+    return render(request, "audio.html")
 
-def wedding(request):
-    return render(request, "wedding.html")
+def video(request):
+    return render(request, "video.html")
 
-def pre_wedding(request):
-    return render(request, "pre_wedding.html")
+def photo(request):
+    return render(request, "photo.html")
+
 def contact(request):
     if request.method == "POST":
         name= request.POST.get('name')
         phone=request.POST.get('phone')
         email=request.POST.get('email')
-        password=request.POST.get('password')
         desc=request.POST.get('desc')
 
         
-        contact = Contact(name=name , phone=phone, email=email, password=password, desc=desc, date=datetime.today())
+        contact = Contact(name=name , phone=phone, email=email, desc=desc, date=datetime.today())
         contact.save()
         messages.success(request,"your message has been sent")
     
     return render(request,"contact.html")
 
-    #return HttpResponse("this is contact page")
+    
