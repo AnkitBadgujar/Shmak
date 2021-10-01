@@ -34,7 +34,7 @@ def contact(request):
     return render(request,"contact.html")
 
 def allcontact(request):
-    cntd = Contact.objects.all()
-    return render (request,"allcontact.html",{'cnt':cntd})
+    contactdata = Contact.objects.all()
+    return render (request,"allcontact.html",{'cntd':contactdata})
 
     

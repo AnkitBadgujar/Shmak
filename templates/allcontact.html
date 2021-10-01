@@ -1,35 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>All Contact Page</h1>
-    {% if cnt %}
-        <h1>Show Data</h1>
-        <h3>{{cnt}}</h3>
+{% extends 'base.html' %}
 
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Phone no.</th>
-                <th>Email</th>
-                <th>Description</th>
-            </tr>
-            {% for st in cnt %}
-            <tr>
-                <td>{{st.name}}</td>
-                <td>{{st.phone}}</td>
-                <td>{{st.email}}</td>
-                <td>{{st.desc}}</td>
-            </tr>    
-            {% endfor %}
-        </table>   
-    {% else %}        
-        <h1>No Data</h1>
-    {% endif %}
-</body>
+{% block title %}All Contact{% endblock title %}
+
+{% block body %}
+    <section class="container">
+        <div class="row justify-content-around text-center text-info mt-5">
+            <div class="col-sm-8 ">
+                <h3> All Contact Table</h3>
+            </div>
+        </div>
+        <div class="row justify-content-around mt-3">
+        </div>
+        <div class="row justify-content-around text-center text-white mt-1">
+            <div class="col-sm-8 ">
+                <table class="table table-hover table-danger">
+                    <thead>
+                      <tr>
+                        <th scope="col">Serial No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone No.</th>
+                        <th scope="col">Email Id</th>
+                        <th scope="col">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for data in cntd %}
+                      <tr>  
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{data.name}}</td>
+                        <td>{{data.phone}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.desc}}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-info text-light position-relative fixed-bottom">
+        <p class="text-center py-2 my-0">
+            Copyright &copy; 2022 - All rights reserved
+        </p>
+      </footer>
+{% endblock body %}
 </html>

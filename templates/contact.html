@@ -13,30 +13,26 @@
     {% csrf_token %} 
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp"
-                placeholder="Enter Your Name :Ankit">
+            <input type="text" class="form-control" name="name" aria-describedby="nameHelp"
+                placeholder="Enter Your Name >
             <div id="nameHelp" class="form-text">We'll never share your details with anyone else.</div>
         </div>
         <div class="mb-3">
             <label for="phonenumber" class="form-label">Phone Number</label>
-            <input type="phone" class="form-control" id="phonenumber" name="phone" aria-describedby="phoneHelp"
-                placeholder="Enter Your Phone Number:1234560987">
+            <input type="phone" class="form-control" name="phone" aria-describedby="phoneHelp"
+                placeholder="Enter Your Phone Number">
             <div id="phoneHelp" class="form-text">We'll never share your phone number with anyone else.</div>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
-                placeholder="Enter Your Email Address:afdcvxvcxsdfsg@gmail.com">
+            <input type="email" class="form-control"  name="email" aria-describedby="emailHelp"
+                placeholder="Enter Your Email">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
 
         <div class="mb-3">
             <label for="desc" class="form-label">Tell me about what you want to contact me for ...</label>
-            <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
-        </div>
-        <div class="mb-3 form-check ">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <textarea class="form-control" name="desc" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -76,7 +72,7 @@
     </div>
 </div>
 
-<footer class="bg-dark text-light position-relative fixed-bottom">
+<footer class="bg-info text-light position-relative fixed-bottom">
     <p class="text-center py-2 my-0">
         Copyright &copy; 2022 - All rights reserved
     </p>

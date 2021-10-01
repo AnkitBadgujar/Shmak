@@ -12,7 +12,7 @@
     <title> {% block title %} {% endblock title %} Saint Haridas Kharenti Ashram</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Saint Haridas Kharenti Ashram</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,6 +50,7 @@
     </div>
   </div>
 </nav>
+
 {% if messages %}
 {% for message in messages %}
 <div class="alert alert-{{message.tag}} alert-dismissible fade show my-0 " role="alert">
@@ -60,7 +61,10 @@
 </div>
 {% endfor %} 
 {% endif %}
-{% block body %} {% endblock body %}
+{% block body %} 
+
+
+{% endblock body %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 
