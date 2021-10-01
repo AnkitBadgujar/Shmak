@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Contact Page</h1>
+    {% if cnt %}
+        <h1>Show Data</h1>
+        <h3>{{cnt}}</h3>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Phone no.</th>
+                <th>Email</th>
+                <th>Description</th>
+            </tr>
+            {% for st in cnt %}
+            <tr>
+                <td>{{st.name}}</td>
+                <td>{{st.phone}}</td>
+                <td>{{st.email}}</td>
+                <td>{{st.desc}}</td>
+            </tr>    
+            {% endfor %}
+        </table>   
+    {% else %}        
+        <h1>No Data</h1>
+    {% endif %}
+</body>
+</html>

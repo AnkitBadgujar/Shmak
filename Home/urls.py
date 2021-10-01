@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact',views.contact,name='contact'),
     path('audio',views.audio,name='audio'),
     path('video',views.video,name='video'),
-    path('photo',views.photo,name='photo')
+    path('photo',views.photo,name='photo'),
+    path('allcontact',views.allcontact,name='allcontact')
     
 ]

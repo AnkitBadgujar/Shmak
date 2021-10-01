@@ -1,3 +1,4 @@
+from django.http import request
 from django.shortcuts import render,HttpResponse
 from Home.models import Contact
 from datetime import datetime
@@ -19,6 +20,7 @@ def video(request):
 def photo(request):
     return render(request, "photo.html")
 
+
 def contact(request):
     if request.method == "POST":
         name= request.POST.get('name')
@@ -30,5 +32,9 @@ def contact(request):
         messages.success(request,"your message has been sent")
     
     return render(request,"contact.html")
+
+def allcontact(request):
+    cntd = Contact.objects.all()
+    return render (request,"allcontact.html",{'cnt':cntd})
 
     
